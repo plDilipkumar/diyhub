@@ -1,0 +1,55 @@
+/* Container styling */
+.ai-response-container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.ai-response-container:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+/* Heading styling */
+.ai-response-heading {
+    font-size: 2rem; /* Increased font size */
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase; /* Uppercase for emphasis */
+    letter-spacing: 1px; /* Spacing between letters */
+}
+
+/* List styling */
+.ai-response-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* List item styling */
+.ai-response-item {
+    margin: 10px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    color: #555;
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.ai-response-item:hover {
+    background-color: #e0f7fa; /* Light blue background on hover */
+}
+
+/* Empty state styling */
+.ai-response-no-suggestions {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+    margin-top: 20px; /* Space above the message */
+}

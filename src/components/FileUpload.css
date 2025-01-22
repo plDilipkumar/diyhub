@@ -1,0 +1,72 @@
+.file-upload-container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.file-upload-heading {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.file-upload-input {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+.file-upload-input:focus {
+    border-color: #007BFF; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.file-upload-button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #fff;
+    background: linear-gradient(45deg, #007BFF, #00C6FF); /* Gradient background */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease; /* Smooth transition */
+}
+
+.file-upload-button:hover {
+    background: linear-gradient(45deg, #00C6FF, #007BFF); /* Reverse gradient on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+.file-upload-button.loading {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+.file-upload-message {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.file-upload-classification {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.file-upload-repair-guide {
+    margin-top: 20px;
+    text-align: left;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

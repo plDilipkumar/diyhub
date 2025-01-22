@@ -1,20 +1,46 @@
+/* General App Styles */
 .App {
   text-align: center;
+  min-height: 100vh; /* Full height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Arial', sans-serif; /* Change font for better readability */
+  color: #333; /* Default text color */
+  padding: 20px; /* Add some padding */
+  position: relative; /* Position for stacking */
+  overflow: hidden; /* Prevent overflow */
 }
 
+/* Video Background Styles */
+.background-video {
+  position: absolute; /* Position it absolutely */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  object-fit: cover; /* Cover the entire area */
+  z-index: -1; /* Behind other content */
+}
+
+/* Logo Styles */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  margin-bottom: 20px; /* Space below the logo */
 }
 
+/* Animation for the logo */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
+/* Header Styles */
 .App-header {
-  background-color: #282c34;
+  background-color: rgba(40, 44, 52, 0.9); /* Semi-transparent dark background */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,12 +48,25 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  padding: 20px; /* Padding for header */
+  position: relative; /* Position for stacking */
+  z-index: 1; /* Above the background video */
 }
 
+/* Link Styles */
 .App-link {
   color: #61dafb;
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth color transition */
 }
 
+.App-link:hover {
+  color: #21a1f1; /* Change color on hover */
+}
+
+/* Keyframes for logo spin animation */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +74,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Additional styles for headings */
+h1 {
+  font-size: 2.5rem; /* Larger font size for the main heading */
+  margin-bottom: 20px; /* Space below the heading */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }

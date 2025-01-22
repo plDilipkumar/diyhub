@@ -1,17 +1,20 @@
 import React from 'react';
+import './AIResponse.css'; // Importing the CSS file
 
 const AIResponse = ({ suggestions }) => {
     return (
-        <div>
-            <h2>AI Suggestions</h2>
+        <div className="ai-response-container">
+            <h2 className="ai-response-heading">AI Suggestions</h2>
             {suggestions && suggestions.length > 0 ? (
-                <ul>
+                <ul className="ai-response-list">
                     {suggestions.map((suggestion, index) => (
-                        <li key={index}>{suggestion}</li>
+                        <li key={index} className="ai-response-item">
+                            {suggestion}
+                        </li>
                     ))}
                 </ul>
             ) : (
-                <p>No suggestions available.</p>
+                <p className="ai-response-no-suggestions">No suggestions available.</p>
             )}
         </div>
     );

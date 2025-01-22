@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './FileUpload.css'; // Importing the CSS file
 
 const FileUpload = () => {
     const [file, setFile] = useState(null);
@@ -26,7 +27,6 @@ const FileUpload = () => {
             const response = await axios.post('http://localhost:5000/api/upload', formData, {
                 headers: { 'Content-Type': 'multipart/form-data' },
             });
-            
 
             setMessage(response.data.message);
             setClassification(response.data.classification || '');
@@ -40,16 +40,16 @@ const FileUpload = () => {
     };
 
     return (
-        <div>
-            <h1>Upload Image for Repair Suggestions</h1>
-            <input type="file" onChange={handleFileChange} />
-            <button onClick={handleUpload} disabled={loading}>
+        <div className="file-upload-container">
+            <h1 className="file-upload-heading">Upload Image for Repair Suggestions</h1>
+            <input type="file" onChange={handleFileChange} className="file-upload-input" />
+            <button onClick={handleUpload} disabled={loading} className={`file-upload-button ${loading ? 'loading' : ''}`}>
                 {loading ? 'Uploading...' : 'Upload'}
             </button>
-            {message && <p>{message}</p>}
-            {classification && <p>Classification: {classification}</p>}
+            {message && <p className="file-upload-message">{message}</p>}
+            {classification && <p className="file-upload-classification">Classification: <strong>{classification}</strong></p>}
             {repairGuide && (
-                <div>
+                <div className="file-upload-repair-guide">
                     <h3>Repair Guide:</h3>
                     <p>{repairGuide}</p>
                 </div>
