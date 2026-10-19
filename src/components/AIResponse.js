@@ -4,7 +4,7 @@ import './AIResponse.css'; // Importing the CSS file
 const AIResponse = ({ suggestions }) => {
     return (
         <div className="ai-response-container">
-            <h2 className="ai-response-heading">AI Suggestions</h2>
+            <h2 className="ai-response-heading">Suggested next steps</h2>
             {suggestions && suggestions.length > 0 ? (
                 <ul className="ai-response-list">
                     {suggestions.map((suggestion, index) => (
@@ -14,7 +14,7 @@ const AIResponse = ({ suggestions }) => {
                     ))}
                 </ul>
             ) : (
-                <p className="ai-response-no-suggestions">No suggestions available.</p>
+                <p className="ai-response-no-suggestions">Upload a device image to receive general, rule-based guidance.</p>
             )}
         </div>
     );
