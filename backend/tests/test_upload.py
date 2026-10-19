@@ -20,6 +20,11 @@ def test_health_is_public_and_minimal():
     assert response.json()["status"] == "ok"
 
 
+def test_render_head_probe_is_healthy():
+    response = client.head("/")
+    assert response.status_code == 200
+
+
 def test_upload_valid_image_returns_cautious_guidance():
     response = client.post(
         "/api/upload",
