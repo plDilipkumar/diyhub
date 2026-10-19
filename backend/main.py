@@ -5,7 +5,7 @@ import io
 import os
 from pathlib import Path
 
-from fastapi import FastAPI, File, HTTPException, UploadFile
+from fastapi import FastAPI, File, HTTPException, Response, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from PIL import Image, UnidentifiedImageError
 
@@ -59,6 +59,12 @@ def repair_advice(filename: str) -> tuple[str, str, list[str]]:
 @app.get("/")
 def root() -> dict:
     return {"service": "DIY Repair Hub API", "health": "/health", "upload": "POST /api/upload"}
+
+
+@app.head("/")
+def root_head() -> Response:
+    # Render's default health probe may use HEAD /.
+    return Response(status_code=200)
 
 
 @app.get("/health")
