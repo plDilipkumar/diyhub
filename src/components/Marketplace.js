@@ -6,9 +6,9 @@ const Marketplace = () => {
         <div className="marketplace-container">
             <h2 className="marketplace-heading">Marketplace</h2>
             <p className="marketplace-description">
-                Browse our wide collection of spare parts and tools to repair your products efficiently.
+                Explore step-by-step repair documentation and safety guidance before attempting a repair.
             </p>
-            <button className="marketplace-button">Explore Now</button>
+            <a className="marketplace-button" href="https://www.ifixit.com/Guide" target="_blank" rel="noreferrer">Explore repair guides ↗</a>
             <div className="marketplace-footer">
                 &copy; 2023 Marketplace. All rights reserved.
             </div>
